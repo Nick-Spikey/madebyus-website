@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MadeByUs - Handmade Furniture</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>MadeByUs</h1>
+    <p>Handmade furniture tailored to your needs</p>
+  </header>
+
+  <!-- About Us Section -->
+  <section id="about-us">
+    <div class="about-container">
+      <h2>About Us</h2>
+      <p>
+        We are <strong>MadeByUs</strong>, a <strong>family-run business</strong> passionate about creating 
+        <strong>handmade, customizable furniture</strong> for every home. Each item is crafted with care, 
+        attention to detail, and the highest quality materials. From planters to benches, stools to wine holders, 
+        everything is made <strong>just for you</strong>.
+      </p>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <h2>Our Furniture</h2>
+    <div class="items">
+
+      <!-- Planter -->
+      <div class="item" onclick="openModal(this)"
+           data-extras="images/planters/planter2.png,images/planters/planter3.png,images/planters/planter4.png"
+           data-price="Varies per customisation"
+           data-size="Any size makeable"
+           data-description="A beautifully handcrafted oak planter perfect for your home or garden. Customizable in size and finish. Can also be lined to protect it against a build up of water"
+           data-material="Reclaimed wood">
+        <img src="images/planters/planter1.png" alt="Planter">
+        <h3>Planter</h3>
+      </div>
+
+      <!-- Bench -->
+      <div class="item" onclick="openModal(this)"
+           data-extras="images/benches/bench2.png,images/benches/bench3.png"
+           data-price="Varies per customisation"
+           data-size="Any size makeable"
+           data-description="A beautifully handcrafted oak bench perfect for your home or garden. Customizable in size and finish."
+           data-material="Reclaimed wood">
+        <img src="images/benches/bench1.png" alt="Bench">
+        <h3>Bench</h3>
+      </div>
+
+      <!-- Plaques -->
+      <div class="item" onclick="openModal(this)"
+           data-extras="images/Plaques/plaque2.png,images/Plaques/plaque3.png,images/Plaques/plaque4.png"
+           data-price="Varies per customisation"
+           data-size="Any size makeable"
+           data-description="A beautifully handcrafted oak plaque perfect for your home or garden. Customizable in size and finish."
+           data-material="Reclaimed wood">
+        <img src="images/plaques/plaque1.png" alt="Plaques">
+        <h3>Plaques</h3>
+      </div>
+
+      <!-- Add more items here -->
+
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: <a href="mailto:info@madebyus.com">info@madebyus.com</a></p>
+    <p>Phone: <a href="tel:+441234567890">+44 123 456 7890</a></p>
+    <p>Instagram / Facebook: @MadeByUs</p>
+  </section>
+
+  <!-- Custom Order Form Section -->
+  <section id="order-form">
+    <div class="form-container">
+      <h2>Custom Order Inquiry</h2>
+      <p>Fill out this form and we’ll get back to you about your handmade furniture.</p>
+
+      <form id="customOrderForm">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your email" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Optional">
+
+        <label for="item">Items Interested In</label>
+        <input type="text" id="item" name="item" placeholder="e.g., Planter, Bench" required>
+
+        <label for="details">Customisation Details</label>
+        <textarea id="details" name="details" placeholder="Sizes, colours, materials, special requests..." rows="5"></textarea>
+
+        <button type="submit">Submit Inquiry</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div class="modal-body">
+
+        <!-- Left: main image + extra images -->
+        <div class="modal-left">
+          <img id="modal-img" src="" alt="Main Item">
+          <div class="extra-images"></div>
+        </div>
+
+        <!-- Right: item details -->
+        <div class="modal-right">
+          <h3 id="modal-title">Item Title</h3>
+          <p id="modal-description">Full description goes here.</p>
+          <p id="modal-price">Price: Varies per item</p>
+          <p id="modal-size">Size: Customizable</p>
+          <p id="modal-material">Material: Wood</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
