@@ -167,5 +167,3 @@ form.addEventListener('submit', function(e) {
 
   form.reset();
 });
-
->>>>>>> 639d4a556a61da33837e53b34fd71ac63f51358e
